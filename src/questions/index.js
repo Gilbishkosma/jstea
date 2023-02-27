@@ -6,4 +6,4 @@ const questions = [first,second]
 
 const question = questions[Math.floor(Math.random()*questions.length)];
 
-export default questions[1];
+export default question;
