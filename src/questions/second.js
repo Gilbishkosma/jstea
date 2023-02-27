@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-const Task = () => {
+const task = `() => {
 
     /*
     Given a string s and an array of words arr,
@@ -25,7 +25,7 @@ const Task = () => {
     // manipulate the array here
 
     return output;
-}
+}`
 
 const expectedOutput = "cdef"
 
@@ -38,4 +38,6 @@ const checkExpectedOutput = (userOutput) => {
     }
 }
 
-export default { Task, expectedOutput, checkExpectedOutput }
+const question = { task, expectedOutput, checkExpectedOutput }
+
+export default question;

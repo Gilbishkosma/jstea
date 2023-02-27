@@ -1,9 +1,8 @@
 
-
+const path = "@/questions/"
 
 export const getRandomQuestion = () => {
-    const questions = ['first.js', 'second.js'];
-
-    return questions[1]
-
+    const questions = ['first', 'second'];
+    const res = questions[Math.floor(Math.random()* questions.length)];
+    return res;
 }

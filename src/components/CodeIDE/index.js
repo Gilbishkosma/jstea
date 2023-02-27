@@ -4,9 +4,8 @@ import { Button } from "@nextui-org/react";
 import Result from "../Result";
 import Question from "@/questions";
 
+const { task, expectedOutput, checkExpectedOutput } = Question
 
-
-const { Task, expectedOutput, checkExpectedOutput } = Question;
 const CodeIde = () => {
     const [showModal, setShowModal] = useState(false)
     const [startTime, setStartTime] = useState(() => Date.now());
@@ -28,7 +27,6 @@ const CodeIde = () => {
 
     const showValue = () => {
         var output = new Function(editorRef.current.getValue())();
-        console.log(output)
         const result = checkExpectedOutput(output);
         setState(state => ({ ...state, userOutput: output, isCorrect: result }))
         handleModal();
@@ -45,7 +43,7 @@ const CodeIde = () => {
             height="80vh"
             theme="vs-dark"
             defaultLanguage="javascript"
-            value={passDefaultValue(Task.toString())}
+            value={passDefaultValue(task.toString())}
             onMount={handleEditorDidMount}
         />
         <Button bordered disabled={!editerLoaded} color={"gradient"} css={{

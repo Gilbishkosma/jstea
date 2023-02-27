@@ -1,9 +1,9 @@
-import First from './first'
-import second from './second'
+import first from './first';
+import second from './second';
 
 
-const questions = [First, second];
+const questions = [first,second]
 
-const randomIndex = Math.floor(Math.random() * questions.length);
+const question = questions[Math.floor(Math.random()*questions.length)];
 
-export default questions[randomIndex];
+export default questions[1];

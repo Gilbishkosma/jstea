@@ -1,6 +1,6 @@
 import { assert } from "chai";
 
-const Task = () => {
+const task = (`() => {
     /*  Return the expected output
         Expected Output = {
         "apple": 30,
@@ -50,7 +50,7 @@ const Task = () => {
     // manipulate the array here
 
     return output;
-}
+}`)
 
 const expectedOutput = {
     "apple": 30,
@@ -67,5 +67,6 @@ const checkExpectedOutput = (userOutput) => {
     }
 }
 
+const question = { task, expectedOutput, checkExpectedOutput }
 
-export default { Task, expectedOutput, checkExpectedOutput }
+export default question;
